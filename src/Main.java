@@ -84,5 +84,36 @@ public class Main {
         } else {
             System.out.println("Communication Status    : Not Eligible");
         }
+
+        // Displaying the final eligibility status
+
+        if (!degreeEligible) {
+            System.out.println("Application Status  : Not Eligible");
+            System.out.println("Next Action        : Improve the required degree percentage.");
+        } else if (!backlogEligible) {
+            System.out.println("Application Status : Not Eligible");
+            System.out.println("Next Action        : Clear all active backlogs.");
+        } else if (!graduationYearEligible) {
+            System.out.println("Application Status  : Not Eligible");
+            System.out.println("Next Action        : Check the eligible graduation-year criteria.");
+        } else if (!aptituteEligible) {
+            System.out.println("Application Status : Not Eligible");
+            System.out.println("Next Action        : Improve aptitude assessment performance.");
+        } else if (!codingEligible) {
+            System.out.println("Application Status : Not Eligible");
+            System.out.println("Next Action        : Improve coding assessment performance.");
+        } else if (!communicationEligible) {
+            System.out.println("Application Status : Not Eligible");
+            System.out.println("Next Action        : Improve communication assessment performance.");
+        } else if (!projectEligible) {
+            System.out.println("Application Status : Application On Hold");
+            System.out.println("Next Action        : Complete the required project.");
+        } else if (!verificationEligible) {
+            System.out.println("Application Status  : Application On Hold");
+            System.out.println("Next Action         : Complete profile verification.");
+        } else {
+            System.out.println("Application Status  : Eligible to Apply");
+            System.out.println("Next Action         : Submit the company application.");
+        }
     }
 }
