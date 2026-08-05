@@ -18,5 +18,16 @@ public class Main {
         // candidate assignment details
         double aptitudePercentage = (double) aptitudeCorrectAns / aptitideTotalQ * 100;
         double codingPercentage = (double) codingTestcasesPass / totalCodingTestcases * 100;
+
+        // created boolean expression
+        boolean degreeEligible = degreePercentage >= 60;
+        boolean backlogEligible = activeBacklogs == 0;
+        boolean graduationYearEligible = graduationYear >= 2025 && graduationYear <= 2027;
+        boolean aptituteEligible = aptitudePercentage >= 60;
+        boolean codingEligible = codingPercentage >= 70;
+        boolean communicationEligible = communicationScore >= 60;
+        boolean projectEligible = projectCompleted;
+        boolean verificationEligible = profileVerified;
+
     }
 }
