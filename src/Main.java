@@ -29,5 +29,60 @@ public class Main {
         boolean projectEligible = projectCompleted;
         boolean verificationEligible = profileVerified;
 
+        // create application eligible
+        boolean applicationEligible = degreeEligible && backlogEligible && graduationYearEligible
+                && aptituteEligible && codingEligible && communicationEligible && projectEligible
+                && verificationEligible;
+
+        // cadidate details
+        System.out.println("Campous Placement Application Report");
+        System.out.println("=======================================");
+        System.out.println("Candidate Name        : " + candidateName);
+        System.out.println("Registration Number   : " + registrationNumber);
+        System.out.println("Degree                : " + degree);
+        System.out.println("Degree Percentage     : " + degreePercentage);
+        System.out.println("Active Backlogs       : " + activeBacklogs);
+        System.out.println("-----------------------------------------");
+        System.out.println("Aptitude Score        : " + aptitudeCorrectAns + " / " + aptitideTotalQ);
+        System.out.println("Aptitude Percentage   : " + aptitudePercentage);
+        System.out.println("Coding Test Cases     : " + codingTestcasesPass + " / " + totalCodingTestcases);
+        System.out.println("Coding Percentage     : " + codingPercentage);
+        System.out.println("Communication Score   : " + communicationScore);
+        System.out.println("Projects Completed    : " + (projectCompleted ? "Yes" : "No"));
+        System.out.println("Profile Verified      : " + (profileVerified ? "Yes" : "No"));
+        System.out.println("-----------------------------------------");
+        if (degreeEligible) {
+            System.out.println("Degree Eligibility      : Eligible");
+        } else {
+            System.out.println("Degree Eligibility      : Not Eligible");
+        }
+
+        if (backlogEligible) {
+            System.out.println("Backlog Eligibility     : Eligible");
+        } else {
+            System.out.println("Backlog Eligibility     : Not Eligible");
+        }
+
+        if (graduationYearEligible) {
+            System.out.println("Graduation Year         : Eligible");
+        } else {
+            System.out.println("Graduation Year         : Not Eligible");
+        }
+        if (aptituteEligible) {
+            System.out.println("Aptitude Eligibility    : Eligible");
+        } else {
+            System.out.println("Aptitude Eligibility    : Not Eligible");
+        }
+
+        if (codingEligible) {
+            System.out.println("Coding Eligibility      : Eligible");
+        } else {
+            System.out.println("Coding Eligibility      : Not Eligible");
+        }
+        if (communicationEligible) {
+            System.out.println("Communication Status    : Eligible");
+        } else {
+            System.out.println("Communication Status    : Not Eligible");
+        }
     }
 }
